@@ -14,6 +14,7 @@ class GameScene: SKScene {
     var plane: Plane?
     var ocean1: Ocean?
     var ocean2: Ocean?
+    var island: Island?
     var degToRad = 0.01745329252
     
     override func didMove(to view: SKView) {
@@ -30,6 +31,9 @@ class GameScene: SKScene {
         ocean2?.position.y = 772
         ocean2?.zPosition = 0
         addChild(ocean2!)
+        
+        island = Island()
+        addChild(island!)
         
         // add plane to scene
         plane = Plane()
@@ -72,6 +76,7 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         ocean1?.Update()
         ocean2?.Update()
+        island?.Update()
         plane?.Update()
     }
 

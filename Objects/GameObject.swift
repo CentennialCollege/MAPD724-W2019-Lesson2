@@ -9,6 +9,8 @@ class GameObject : SKSpriteNode, GameProtocol {
     var halfHeight: CGFloat?
     var scale: CGFloat?
     var verticalSpeed: CGFloat?
+    var randomSource: GKARC4RandomSource?
+    var randomDist: GKRandomDistribution?
     
     
     // Initializers
@@ -23,6 +25,7 @@ class GameObject : SKSpriteNode, GameProtocol {
         self.height = texture.size().height * self.scale!
         self.halfWidth = self.width! * 0.5
         self.halfHeight = self.height! * 0.5
+        randomSource = GKARC4RandomSource()
     }
     
     required init?(coder aDecoder: NSCoder) {

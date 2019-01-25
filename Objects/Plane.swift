@@ -13,7 +13,7 @@ class Plane : GameObject {
     }
     
     override func Start() {
-        self.zPosition = 1
+        self.zPosition = 2
     }
     
     

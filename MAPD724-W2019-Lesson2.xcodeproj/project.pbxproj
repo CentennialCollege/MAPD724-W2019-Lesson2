@@ -30,6 +30,7 @@
 		E9438C4F21F17E5C00202EEF /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9438C4E21F17E5C00202EEF /* Plane.swift */; };
 		E9B7D64C21FA96D800D39FEA /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B7D64B21FA96D800D39FEA /* GameProtocol.swift */; };
 		E9B7D64E21FAA50100D39FEA /* Ocean.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B7D64D21FAA50100D39FEA /* Ocean.swift */; };
+		E9B7D65021FAB27A00D39FEA /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B7D64F21FAB27A00D39FEA /* Island.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		E9438C4E21F17E5C00202EEF /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		E9B7D64B21FA96D800D39FEA /* GameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
 		E9B7D64D21FAA50100D39FEA /* Ocean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ocean.swift; sourceTree = "<group>"; };
+		E9B7D64F21FAB27A00D39FEA /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				E9438C4E21F17E5C00202EEF /* Plane.swift */,
 				E9B7D64B21FA96D800D39FEA /* GameProtocol.swift */,
 				E9B7D64D21FAA50100D39FEA /* Ocean.swift */,
+				E9B7D64F21FAB27A00D39FEA /* Island.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			files = (
 				E9B7D64E21FAA50100D39FEA /* Ocean.swift in Sources */,
 				E9438C4D21F17B4400202EEF /* GameObject.swift in Sources */,
+				E9B7D65021FAB27A00D39FEA /* Island.swift in Sources */,
 				E9438C2321F1560200202EEF /* GameScene.swift in Sources */,
 				E9438C4F21F17E5C00202EEF /* Plane.swift in Sources */,
 				E9438C2521F1560200202EEF /* GameViewController.swift in Sources */,
