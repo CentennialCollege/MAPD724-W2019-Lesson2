@@ -28,6 +28,7 @@
 		E9438C4A21F160AB00202EEF /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E9438C3F21F160AB00202EEF /* startButton.png */; };
 		E9438C4D21F17B4400202EEF /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9438C4C21F17B4400202EEF /* GameObject.swift */; };
 		E9438C4F21F17E5C00202EEF /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9438C4E21F17E5C00202EEF /* Plane.swift */; };
+		E9B7D64C21FA96D800D39FEA /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B7D64B21FA96D800D39FEA /* GameProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		E9438C3F21F160AB00202EEF /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButton.png; sourceTree = "<group>"; };
 		E9438C4C21F17B4400202EEF /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		E9438C4E21F17E5C00202EEF /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		E9B7D64B21FA96D800D39FEA /* GameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			children = (
 				E9438C4C21F17B4400202EEF /* GameObject.swift */,
 				E9438C4E21F17E5C00202EEF /* Plane.swift */,
+				E9B7D64B21FA96D800D39FEA /* GameProtocol.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				E9438C4F21F17E5C00202EEF /* Plane.swift in Sources */,
 				E9438C2521F1560200202EEF /* GameViewController.swift in Sources */,
 				E9438C1D21F1560200202EEF /* AppDelegate.swift in Sources */,
+				E9B7D64C21FA96D800D39FEA /* GameProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

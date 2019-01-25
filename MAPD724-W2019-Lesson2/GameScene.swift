@@ -1,6 +1,13 @@
 
 import SpriteKit
 import GameplayKit
+import UIKit
+import AVFoundation
+
+let screenSize = UIScreen.main.bounds
+var screenWidth: CGFloat?
+var screenHeight: CGFloat?
+
 
 class GameScene: SKScene {
     
@@ -8,6 +15,9 @@ class GameScene: SKScene {
     var degToRad = 0.01745329252
     
     override func didMove(to view: SKView) {
+        
+        screenWidth = frame.width
+        screenHeight = frame.height
         
         plane = Plane()
         plane?.position = CGPoint(x: 0.0, y: -500.0)
@@ -48,8 +58,7 @@ class GameScene: SKScene {
     
     
     override func update(_ currentTime: TimeInterval) {
-        //var newRotation = CGFloat(5.0 * degToRad)
-        //plane?.zRotation += newRotation
+        plane?.Update()
     }
 
 }

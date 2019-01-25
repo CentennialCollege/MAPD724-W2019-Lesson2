@@ -10,4 +10,20 @@ class Plane : GameObject {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func CheckBounds() {
+        // check the right boundary
+        if(self.position.x > screenSize.width - self.halfWidth!) {
+            self.position.x = screenSize.width - self.halfWidth!
+        }
+        
+        // check the left boundary
+        if(self.position.x < -screenSize.width + self.halfWidth!) {
+            self.position.x = -screenSize.width + self.halfWidth!
+        }
+    }
+    
+    override func Update() {
+        CheckBounds()
+    }
 }
