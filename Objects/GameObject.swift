@@ -8,6 +8,7 @@ class GameObject : SKSpriteNode, GameProtocol {
     var halfWidth: CGFloat?
     var halfHeight: CGFloat?
     var scale: CGFloat?
+    var verticalSpeed: CGFloat?
     
     
     // Initializers

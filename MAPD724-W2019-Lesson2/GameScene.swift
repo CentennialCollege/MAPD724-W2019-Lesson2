@@ -12,6 +12,8 @@ var screenHeight: CGFloat?
 class GameScene: SKScene {
     
     var plane: Plane?
+    var ocean1: Ocean?
+    var ocean2: Ocean?
     var degToRad = 0.01745329252
     
     override func didMove(to view: SKView) {
@@ -19,9 +21,19 @@ class GameScene: SKScene {
         screenWidth = frame.width
         screenHeight = frame.height
         
+        // add the ocean1 to scene
+        ocean1 = Ocean()
+        addChild(ocean1!)
+        
+        // add the ocean1 to scene
+        ocean2 = Ocean()
+        ocean2?.position.y = 772
+        ocean2?.zPosition = 0
+        addChild(ocean2!)
+        
+        // add plane to scene
         plane = Plane()
         plane?.position = CGPoint(x: 0.0, y: -500.0)
-        
         addChild(plane!)
        
     }
@@ -58,6 +70,8 @@ class GameScene: SKScene {
     
     
     override func update(_ currentTime: TimeInterval) {
+        ocean1?.Update()
+        ocean2?.Update()
         plane?.Update()
     }
 
