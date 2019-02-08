@@ -91,8 +91,12 @@ class GameScene: SKScene {
         island?.Update()
         plane?.Update()
         
+        Collision.check(object1: plane!, object2: island!)
+        
+        
         for cloud in clouds {
             cloud.Update()
+            Collision.check(object1: plane!, object2: cloud)
         }
     }
 

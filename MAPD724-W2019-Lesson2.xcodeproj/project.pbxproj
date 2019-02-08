@@ -32,6 +32,8 @@
 		E9B7D64E21FAA50100D39FEA /* Ocean.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B7D64D21FAA50100D39FEA /* Ocean.swift */; };
 		E9B7D65021FAB27A00D39FEA /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B7D64F21FAB27A00D39FEA /* Island.swift */; };
 		E9E99892220CFF60006D0DDC /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E99891220CFF60006D0DDC /* Cloud.swift */; };
+		E9E99895220D0D22006D0DDC /* Collision.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E99894220D0D22006D0DDC /* Collision.swift */; };
+		E9E99897220D0E5F006D0DDC /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E99896220D0E5F006D0DDC /* Distance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		E9B7D64D21FAA50100D39FEA /* Ocean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ocean.swift; sourceTree = "<group>"; };
 		E9B7D64F21FAB27A00D39FEA /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		E9E99891220CFF60006D0DDC /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
+		E9E99894220D0D22006D0DDC /* Collision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collision.swift; sourceTree = "<group>"; };
+		E9E99896220D0E5F006D0DDC /* Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 				E9B7D64D21FAA50100D39FEA /* Ocean.swift */,
 				E9B7D64F21FAB27A00D39FEA /* Island.swift */,
 				E9E99891220CFF60006D0DDC /* Cloud.swift */,
+				E9E99896220D0E5F006D0DDC /* Distance.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 		E9E99893220D0C94006D0DDC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				E9E99894220D0D22006D0DDC /* Collision.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -234,7 +240,9 @@
 			files = (
 				E9B7D64E21FAA50100D39FEA /* Ocean.swift in Sources */,
 				E9E99892220CFF60006D0DDC /* Cloud.swift in Sources */,
+				E9E99895220D0D22006D0DDC /* Collision.swift in Sources */,
 				E9438C4D21F17B4400202EEF /* GameObject.swift in Sources */,
+				E9E99897220D0E5F006D0DDC /* Distance.swift in Sources */,
 				E9B7D65021FAB27A00D39FEA /* Island.swift in Sources */,
 				E9438C2321F1560200202EEF /* GameScene.swift in Sources */,
 				E9438C4F21F17E5C00202EEF /* Plane.swift in Sources */,

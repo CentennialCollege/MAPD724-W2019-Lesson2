@@ -13,6 +13,7 @@ class GameObject : SKSpriteNode, GameProtocol {
     var randomSource: GKARC4RandomSource?
     var randomDist: GKRandomDistribution?
     var image: SKTexture?
+    var isColliding: Bool?
     
     
     // Initializers
@@ -21,13 +22,10 @@ class GameObject : SKSpriteNode, GameProtocol {
         image = SKTexture(imageNamed: imageString)
         let color = UIColor.clear
         super.init(texture: image!, color: color, size: image!.size())
-        setScale(initialScale)
-        self.scale = initialScale
-        self.width = image!.size().width * self.scale!
-        self.height = image!.size().height * self.scale!
-        self.halfWidth = self.width! * 0.5
-        self.halfHeight = self.height! * 0.5
+        self.setNewScale(scale: initialScale)
+        self.isColliding = false
         randomSource = GKARC4RandomSource()
+        self.name = imageString
     }
     
     required init?(coder aDecoder: NSCoder) {

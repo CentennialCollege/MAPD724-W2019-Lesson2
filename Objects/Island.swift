@@ -22,6 +22,7 @@ class Island : GameObject {
     }
     
     override func Reset() {
+        self.isColliding = false
         self.position.y = 654 + self.height!
         let randomX:Int =
             (self.randomSource?.nextInt(upperBound: (Int(screenSize.width * 2.0))))! - Int(screenSize.width)
