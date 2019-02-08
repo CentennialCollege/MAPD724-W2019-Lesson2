@@ -9,20 +9,22 @@ class GameObject : SKSpriteNode, GameProtocol {
     var halfHeight: CGFloat?
     var scale: CGFloat?
     var verticalSpeed: CGFloat?
+    var horizontalSpeed: CGFloat?
     var randomSource: GKARC4RandomSource?
     var randomDist: GKRandomDistribution?
+    var image: SKTexture?
     
     
     // Initializers
     init(imageString: String, initialScale: CGFloat) {
         // initialize the GameObject with an image
-        let texture = SKTexture(imageNamed: imageString)
+        image = SKTexture(imageNamed: imageString)
         let color = UIColor.clear
-        super.init(texture: texture, color: color, size: texture.size())
+        super.init(texture: image!, color: color, size: image!.size())
         setScale(initialScale)
         self.scale = initialScale
-        self.width = texture.size().width * self.scale!
-        self.height = texture.size().height * self.scale!
+        self.width = image!.size().width * self.scale!
+        self.height = image!.size().height * self.scale!
         self.halfWidth = self.width! * 0.5
         self.halfHeight = self.height! * 0.5
         randomSource = GKARC4RandomSource()
@@ -47,5 +49,14 @@ class GameObject : SKSpriteNode, GameProtocol {
     
     func Update() {
         
+    }
+    
+    func setNewScale(scale:CGFloat) {
+        setScale(scale)
+        self.scale = scale
+        self.width = image!.size().width * self.scale!
+        self.height = image!.size().height * self.scale!
+        self.halfWidth = self.width! * 0.5
+        self.halfHeight = self.height! * 0.5
     }
 }

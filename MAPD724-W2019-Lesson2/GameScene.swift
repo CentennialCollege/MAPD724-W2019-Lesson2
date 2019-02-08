@@ -15,7 +15,12 @@ class GameScene: SKScene {
     var ocean1: Ocean?
     var ocean2: Ocean?
     var island: Island?
+    
+    var clouds: [Cloud] = []
+    var cloudNum: Int = 3
+    
     var degToRad = 0.01745329252
+    
     
     override func didMove(to view: SKView) {
         
@@ -26,7 +31,7 @@ class GameScene: SKScene {
         ocean1 = Ocean()
         addChild(ocean1!)
         
-        // add the ocean1 to scene
+        // add the ocean2 to scene
         ocean2 = Ocean()
         ocean2?.position.y = 772
         ocean2?.zPosition = 0
@@ -39,6 +44,13 @@ class GameScene: SKScene {
         plane = Plane()
         plane?.position = CGPoint(x: 0.0, y: -500.0)
         addChild(plane!)
+        
+        // adds multiple clouds to the scene
+        for index in 0...self.cloudNum - 1 {
+            let cloud: Cloud = Cloud()
+            clouds.append(cloud)
+            self.addChild(clouds[index])
+        }
        
     }
     
@@ -78,6 +90,10 @@ class GameScene: SKScene {
         ocean2?.Update()
         island?.Update()
         plane?.Update()
+        
+        for cloud in clouds {
+            cloud.Update()
+        }
     }
 
 }

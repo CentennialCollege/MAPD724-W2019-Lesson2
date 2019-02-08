@@ -1,11 +1,11 @@
 import SpriteKit
 import GameplayKit
 
-class Island : GameObject {
+class Cloud : GameObject {
     
     // Initializers
     init() {
-        super.init(imageString: "island", initialScale: 2.0)
+        super.init(imageString: "cloud", initialScale: 1.0)
         self.Start()
     }
     
@@ -16,12 +16,17 @@ class Island : GameObject {
     // class functions
     
     override func Start() {
-        self.verticalSpeed = 10
-        self.zPosition = 1
+        self.alpha = 0.5
+        
         self.Reset()
     }
     
     override func Reset() {
+        self.zPosition = 3
+        let newScale = (self.randomSource?.nextUniform())! + 1.0
+        self.setNewScale(scale: CGFloat(newScale))
+        self.verticalSpeed = CGFloat(((self.randomSource?.nextInt(upperBound: 10))!) + 10)
+        self.horizontalSpeed = CGFloat((self.randomSource?.nextInt(upperBound: 4))! - 2)
         self.position.y = 654 + self.height!
         let randomX:Int =
             (self.randomSource?.nextInt(upperBound: (Int(screenSize.width * 2.0))))! - Int(screenSize.width)
@@ -37,6 +42,7 @@ class Island : GameObject {
     
     override func Update() {
         self.position.y -= self.verticalSpeed!
+        self.position.x -= self.horizontalSpeed!
         self.CheckBounds()
     }
 }
