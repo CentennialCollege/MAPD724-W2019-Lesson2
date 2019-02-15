@@ -3,7 +3,7 @@ import SpriteKit
 
 class Collision {
     
-    public static func check(object1: GameObject, object2: GameObject) {
+    public static func check(scene: SKScene, object1: GameObject, object2: GameObject) {
         let distance = CGPoint.Distance(P1: object1.position, P2: object2.position)
         
         
@@ -15,8 +15,10 @@ class Collision {
                 switch(object2.name) {
                     case "island":
                         ScoreBoard.Score += 100
+                        scene.run(SKAction.playSoundFileNamed("yay", waitForCompletion: false))
                     case "cloud":
                         ScoreBoard.Lives -= 1
+                        scene.run(SKAction.playSoundFileNamed("thunder", waitForCompletion: false))
                     default:
                         print("ERROR: Collision with something else")
                 }

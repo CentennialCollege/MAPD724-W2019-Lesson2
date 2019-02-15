@@ -79,6 +79,23 @@ class GameScene: SKScene {
         
         addChild(ScoreBoard.ScoreLabel)
         
+        // play blackground engine sound
+        let engineSound = SKAudioNode(fileNamed: "engine.mp3")
+        addChild(engineSound)
+        engineSound.autoplayLooped = true
+        
+        //preload sounds
+        do {
+            let sounds:[String] = ["thunder", "yay"]
+            for sound in sounds {
+                let path:String = Bundle.main.path(forResource: sound, ofType: "mp3")!
+                let url: URL = URL(fileURLWithPath: path)
+                let player:AVAudioPlayer = try AVAudioPlayer(contentsOf: url)
+                player.prepareToPlay()
+            }
+        } catch {
+        }
+        
        
     }
     
@@ -119,12 +136,12 @@ class GameScene: SKScene {
         island?.Update()
         plane?.Update()
         
-        Collision.check(object1: plane!, object2: island!)
+        Collision.check(scene: self, object1: plane!, object2: island!)
         
         
         for cloud in clouds {
             cloud.Update()
-            Collision.check(object1: plane!, object2: cloud)
+            Collision.check(scene: self, object1: plane!, object2: cloud)
         }
         
     }
