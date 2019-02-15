@@ -9,8 +9,17 @@ class Collision {
         
         if(distance < (object1.halfHeight! + object2.halfHeight!)) {
             if(!object2.isColliding!) {
-                print ("Collision with \(object2.name!)")
                 object2.isColliding = true
+            
+            
+                switch(object2.name) {
+                    case "island":
+                        ScoreBoard.Score += 100
+                    case "cloud":
+                        ScoreBoard.Lives -= 1
+                    default:
+                        print("ERROR: Collision with something else")
+                }
             }
         }
     }

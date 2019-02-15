@@ -11,6 +11,7 @@ var screenHeight: CGFloat?
 
 class GameScene: SKScene {
     
+    
     var plane: Plane?
     var ocean1: Ocean?
     var ocean2: Ocean?
@@ -51,6 +52,33 @@ class GameScene: SKScene {
             clouds.append(cloud)
             self.addChild(clouds[index])
         }
+        
+        
+        // Label Config and adding to the scene
+        ScoreBoard.LivesLabel.position.x = -screenSize.width + 130.0
+        ScoreBoard.LivesLabel.position.y = screenSize.height - 55.0
+        
+        ScoreBoard.LivesLabel.fontColor = UIColor.yellow
+        ScoreBoard.LivesLabel.fontSize = 48.0
+        ScoreBoard.LivesLabel.zPosition = 5
+        ScoreBoard.LivesLabel.fontName = "Arial Bold"
+        ScoreBoard.Lives = 5
+        
+        
+        addChild(ScoreBoard.LivesLabel)
+        
+        ScoreBoard.ScoreLabel.position.x = screenSize.width - 170.0
+        ScoreBoard.ScoreLabel.position.y = screenSize.height - 55.0
+        
+        ScoreBoard.ScoreLabel.fontColor = UIColor.yellow
+        ScoreBoard.ScoreLabel.fontSize = 48.0
+        ScoreBoard.ScoreLabel.zPosition = 5
+        ScoreBoard.ScoreLabel.fontName = "Arial Bold"
+        ScoreBoard.Score = 0
+        
+        
+        addChild(ScoreBoard.ScoreLabel)
+        
        
     }
     
@@ -98,6 +126,7 @@ class GameScene: SKScene {
             cloud.Update()
             Collision.check(object1: plane!, object2: cloud)
         }
+        
     }
 
 }
